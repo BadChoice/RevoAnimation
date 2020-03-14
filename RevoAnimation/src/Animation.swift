@@ -36,22 +36,31 @@ struct Animation {
 }
 
 extension UIView {
-    func animate(_ animations:[Animation]) {
+    func animate(_ animations:[Animation], then:(()->Void)? = nil) {
         guard !animations.isEmpty else { return }
         
         var animations = animations
         let animation  = animations.removeFirst()
         
-        UIView.animate(withDuration: animation.duration, animations: {
+        UIView.animate(withDuration: animation.duration, animations: { [weak self] in
+            guard let self = self else { return }
             animation.clousure(self)
-        }, completion: { _ in
-            self.animate(animations)
+        }, completion: { [weak self] _ in
+            if animations.count == 0 { then?() }
+            self?.animate(animations, then:then)
         })
     }
     
+    func animate(forever animations:[Animation]){
+        animate(animations) { [weak self] in
+            self?.animate(forever: animations)
+        }
+    }
+    
     func animate(parallel animations:[Animation]) {
-        animations.forEach { animation in
+        animations.forEach { [weak self] animation in
             UIView.animate(withDuration: animation.duration) {
+                guard let self = self else { return }
                 animation.clousure(self)
             }
         }
