@@ -27,6 +27,13 @@ struct Animation {
         }
     }
     
+    static func scale(by scale:CGFloat, duration:TimeInterval = 0.2, delay:TimeInterval = 0) -> Animation {
+        Animation(duration:duration, delay:delay){
+            let scaled = $0.transform.scaledBy(x: scale, y: scale)
+            $0.transform = scaled
+        }
+    }
+    
     static func rotate(by degrees:CGFloat, duration:TimeInterval = 0.2, delay:TimeInterval = 0) -> Animation {
         Animation(duration:duration, delay:delay){
             let angleInRadians = degrees / 180.0 * CGFloat.pi
