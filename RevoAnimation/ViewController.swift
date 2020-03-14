@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         animatedView.animate(forever: [
         //animatedView.animate(parallel: [
             .fadeOut(duration:0.4),
-            .fadeIn(),
+            .fadeIn(duration:0.2, delay:1),
             .move(to: CGPoint(x:100, y:100)),
             .move(to: animatedView.frame.origin, duration:2),
             .rotate(by: 180),
