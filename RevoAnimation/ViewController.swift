@@ -1,20 +1,25 @@
-//
-//  ViewController.swift
-//  RevoAnimation
-//
-//  Created by Jordi Puigdellívol on 14/03/2020.
-//  Copyright © 2020 Jordi Puigdellívol. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var animatedView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func animate(_ sender: Any) {
+        animatedView.animate([
+        //animatedView.animate(parallel: [
+            .fadeOut(),
+            .fadeIn(),
+            .move(to: CGPoint(x:100, y:100)),
+            .move(to: animatedView.frame.origin),
+            .rotate(by: 180),
+            .move(by: CGPoint(x:200, y:200)),
+            .move(by: CGPoint(x:-200, y:-200))
+        ])
+    }
+    
 }
 

@@ -14,6 +14,8 @@
 		BB85C696241D1F2B00B6D282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB85C695241D1F2B00B6D282 /* Assets.xcassets */; };
 		BB85C699241D1F2B00B6D282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB85C697241D1F2B00B6D282 /* LaunchScreen.storyboard */; };
 		BB85C6A4241D1F2B00B6D282 /* RevoAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85C6A3241D1F2B00B6D282 /* RevoAnimationTests.swift */; };
+		BB85C6B0241D1F4400B6D282 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85C6AF241D1F4400B6D282 /* Animation.swift */; };
+		BB85C6B2241D276F00B6D282 /* AnimatedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85C6B1241D276F00B6D282 /* AnimatedPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		BB85C69F241D1F2B00B6D282 /* RevoAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevoAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB85C6A3241D1F2B00B6D282 /* RevoAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevoAnimationTests.swift; sourceTree = "<group>"; };
 		BB85C6A5241D1F2B00B6D282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB85C6AF241D1F4400B6D282 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BB85C6B1241D276F00B6D282 /* AnimatedPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		BB85C68B241D1F2A00B6D282 /* RevoAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				BB85C6AE241D1F3900B6D282 /* src */,
 				BB85C68C241D1F2A00B6D282 /* AppDelegate.swift */,
 				BB85C68E241D1F2A00B6D282 /* SceneDelegate.swift */,
 				BB85C690241D1F2A00B6D282 /* ViewController.swift */,
@@ -97,6 +102,15 @@
 				BB85C6A5241D1F2B00B6D282 /* Info.plist */,
 			);
 			path = RevoAnimationTests;
+			sourceTree = "<group>";
+		};
+		BB85C6AE241D1F3900B6D282 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BB85C6AF241D1F4400B6D282 /* Animation.swift */,
+				BB85C6B1241D276F00B6D282 /* AnimatedPoint.swift */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +216,8 @@
 			files = (
 				BB85C691241D1F2A00B6D282 /* ViewController.swift in Sources */,
 				BB85C68D241D1F2A00B6D282 /* AppDelegate.swift in Sources */,
+				BB85C6B2241D276F00B6D282 /* AnimatedPoint.swift in Sources */,
+				BB85C6B0241D1F4400B6D282 /* Animation.swift in Sources */,
 				BB85C68F241D1F2A00B6D282 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
